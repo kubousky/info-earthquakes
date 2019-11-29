@@ -56,7 +56,7 @@ y falso si no se ha podido abrir el fichero. """
 
 def LeerFichero(fichero):   
     try:
-        file = open("C:/Users/kuba/Desktop/python/OOP/infoTerremotos_class/" + fichero + '.csv','r') 
+        file = open(fichero + '.csv','r') 
     except:
         print ("El fichero {} no existe.".format(fichero))
         print ("Cerrando programa.")
