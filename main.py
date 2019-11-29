@@ -13,7 +13,6 @@ y un campo de tipo Hora para guardar la fecha y hora del terremoto. """
 
 class InfoTerremoto:
     def __init__(self, Year, Month, Day, Hora, Mag, Lat, Lon, Depth_km, Region, IRIS_ID, Timestamp):
-        #Datos de comprobación
         self.Year = int(Year)
         self.Month = int(Month)
         self.Day = int(Day)
@@ -74,23 +73,10 @@ def LeerFichero(fichero):
     file.close()
     return registros
 
-# """ Tarea 5: 
-# Añade al programa anterior una función CompararFechas que sea capaz de comparar dos fechas devolviendo 1 
-# si la primera fecha es menor que la segunda fecha,
-# -1 si la primera fecha es mayor que la segunda fecha y 0 si las dos fechas son iguales.
-# """
-# def CompararFechas(fecha_A, fecha_B):
-#     if (fecha_A > fecha_B):
-#         return 1
-#     if (fecha_A < fecha_B):
-#         return -1
-#     if (fecha_A == fecha_B):
-#         return 0
-
 def leerFechas():
 
     fecha_inicio_str = input("Introduce la fecha de inicio en formato \"dd/mm/yyyy\": ")
-    fecha_inicio = datetime.datetime.strptime(fecha_inicio_str, "%d/%m/%Y").date() # .date() para que salga solo la fecha sin hora
+    fecha_inicio = datetime.datetime.strptime(fecha_inicio_str, "%d/%m/%Y").date()
 
     fecha_fin_str = input("Introduce la fecha de finnal en formato \"dd/mm/yyyy\": ")
     fecha_fin = datetime.datetime.strptime(fecha_fin_str, "%d/%m/%Y").date()
